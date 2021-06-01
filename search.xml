@@ -22,6 +22,8 @@
             
             <tag> Hexo </tag>
             
+            <tag> 博客 </tag>
+            
         </tags>
       
     </entry>
@@ -45,9 +47,9 @@
       
         <tags>
             
-            <tag> 图床 </tag>
-            
             <tag> 博客 </tag>
+            
+            <tag> 图床 </tag>
             
             <tag> 云OSS </tag>
             
@@ -67,7 +69,7 @@
       
       <categories>
           
-          <category> blog </category>
+          <category> 博客 </category>
           
       </categories>
       
@@ -76,7 +78,7 @@
             
             <tag> Hexo </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 博客 </tag>
             
         </tags>
       
