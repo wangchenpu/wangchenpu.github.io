@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="de02, 学习,记录,总结">
+    <meta name="keywords" content="图床：阿里云OSS+PicGo, 学习,记录,总结">
     <meta name="description" content="记录、总结、输出、回顾！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>de02 | 学习日志</title>
+    <title>图床：阿里云OSS+PicGo | 学习日志</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -288,12 +288,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">de02</h1>
+                    <h1 class="description center-align post-title">图床：阿里云OSS+PicGo</h1>
                 </div>
             </div>
         </div>
@@ -409,8 +409,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%97%A0%E6%A0%87%E7%AD%BE3/">
-                                <span class="chip bg-color">无标签3</span>
+                            <a href="/tags/%E5%9B%BE%E5%BA%8A/">
+                                <span class="chip bg-color">图床</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+                                <span class="chip bg-color">博客</span>
+                            </a>
+                        
+                            <a href="/tags/%E4%BA%91OSS/">
+                                <span class="chip bg-color">云OSS</span>
                             </a>
                         
                     </div>
@@ -421,8 +429,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB3/" class="post-category">
-                                未分类3
+                            <a href="/categories/%E9%98%BF%E9%87%8C%E4%BA%91/" class="post-category">
+                                阿里云
                             </a>
                         
                     </div>
@@ -448,7 +456,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    318
                 </div>
                 
 
@@ -468,7 +476,36 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="阿里云OSS"><a href="#阿里云OSS" class="headerlink" title="阿里云OSS"></a>阿里云OSS</h1><h2 id="OSS购买"><a href="#OSS购买" class="headerlink" title="OSS购买"></a>OSS购买</h2><p>购买OSS标准存储包：资源占用OSS空间的费用</p>
+<p>上行流量、下行流量：按量付费(做图床，流量小)</p>
+<h2 id="建Bucket"><a href="#建Bucket" class="headerlink" title="建Bucket"></a>建Bucket</h2><p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/%E6%96%B0%E5%BB%BA.png" alt="建Bucket"></p>
+<h2 id="RAM-访问控制"><a href="#RAM-访问控制" class="headerlink" title="RAM 访问控制"></a>RAM 访问控制</h2><p><strong>1、新建用户</strong></p>
+<p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/RAM%E7%94%A8%E6%88%B7.png" alt="新建RAM用户"></p>
+<p><strong>2、为用户设置权限</strong></p>
+<p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/%E4%B8%BA%E7%94%A8%E6%88%B7%E8%AE%BE%E7%BD%AE%E6%9D%83%E9%99%90.png" alt="为用户设置权限"></p>
+<p><strong>3、获取用户 AccessKey：用于PicGo连接OSS</strong></p>
+<p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/key.png" alt="AccessKey"></p>
+<h2 id="防盗链"><a href="#防盗链" class="headerlink" title="防盗链"></a>防盗链</h2><p>避免图片被其他网站盗用，导致访问量增加，从而在OSS产生额外费用</p>
+<blockquote>
+<p>OSS中，上行、下载都使用了按量付费</p>
+</blockquote>
+<p><strong>1、防盗链基本原理：Referer请求头</strong></p>
+<p><strong>2、将博客地址添加到防盗链白名单中</strong></p>
+<p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/%E7%9B%97%E9%93%BE.png" alt="防盗链"></p>
+<p><strong>3、允许<code>空Referer</code></strong></p>
+<p>空Referer：Referer头的内容为空，或请求中不包含Referer头</p>
+<p>不通过网络页面，直接访问资源，没有Referer请求头</p>
+<ul>
+<li>浏览器地址栏，直接输入资源URL路径</li>
+<li>MarkDown文件中，网络图片的预览显示</li>
+</ul>
+<p>防盗链，主要防的图片被其他页面盗用，这种情况的请求一定包含Referer字段</p>
+<p>允许<code>空Referer</code>，对于个人使用，主要是方便md文件中图片的预览显示</p>
+<h1 id="PicGo配置阿里云OSS"><a href="#PicGo配置阿里云OSS" class="headerlink" title="PicGo配置阿里云OSS"></a>PicGo配置阿里云OSS</h1><p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/%E9%85%8D%E7%BD%AE.png" alt="配置PicGo"></p>
+<p>KeyID、KeySecret：从阿里云OSS的RAM用户页面获取</p>
+<p>存储空间名：图床使用的bucket的名字</p>
+<p>存储区域：从Bucket的概览页面获取</p>
+
                 
             </div>
             <hr/>
@@ -482,8 +519,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%97%A0%E6%A0%87%E7%AD%BE3/">
-                                    <span class="chip bg-color">无标签3</span>
+                                <a href="/tags/%E5%9B%BE%E5%BA%8A/">
+                                    <span class="chip bg-color">图床</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+                                    <span class="chip bg-color">博客</span>
+                                </a>
+                            
+                                <a href="/tags/%E4%BA%91OSS/">
+                                    <span class="chip bg-color">云OSS</span>
                                 </a>
                             
                         </div>
@@ -528,13 +573,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/06/01/de03/">
+                <a href="/2021/06/01/hexo-zhu-ti-yi-ji-pei-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="de03">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Hexo主题以及配置">
                         
-                        <span class="card-title">de03</span>
+                        <span class="card-title">Hexo主题以及配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -551,8 +596,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB2/" class="post-category">
-                                    未分类2
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                    博客
                                 </a>
                             
                             
@@ -562,8 +607,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%97%A0%E6%A0%87%E7%AD%BE2/">
-                        <span class="chip bg-color">无标签2</span>
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
                 </div>
@@ -577,13 +622,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/06/01/de01/">
+                <a href="/2021/06/01/hexo-an-zhuang-bu-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="de01">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Hexo安装部署">
                         
-                        <span class="card-title">de01</span>
+                        <span class="card-title">Hexo安装部署</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -600,8 +645,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB1/" class="post-category">
-                                    未分类1
+                            <a href="/categories/blog/" class="post-category">
+                                    blog
                                 </a>
                             
                             
@@ -611,8 +656,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%97%A0%E6%A0%87%E7%AD%BE2/">
-                        <span class="chip bg-color">无标签2</span>
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
                     </a>
                     
                 </div>
@@ -671,7 +720,7 @@
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4'
         });
 
         // modify the toc link href to support Chinese.
@@ -683,7 +732,7 @@
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
