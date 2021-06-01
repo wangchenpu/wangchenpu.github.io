@@ -452,7 +452,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    375
+                    412
                 </div>
                 
 
@@ -510,6 +510,9 @@
 <p><code>hexo g -d</code>：文件生成后立即部署到网站</p>
 <h1 id="可能出现的问题"><a href="#可能出现的问题" class="headerlink" title="可能出现的问题"></a>可能出现的问题</h1><p><strong>1、<code>hexo d命令</code>报错：<code>ERROR Deployer not found: git</code></strong></p>
 <p>安装hexo的部署插件：<code>npm install --save hexo-deployer-git</code></p>
+<p><strong>2、<code>hexo d命令</code>报错：<code>could not open &#39;.git/COMMIT_EDITMSG&#39;: Permission denied</code></strong></p>
+<p>原因：Windows下，访问了隐藏文件夹：<code>.deploy_git</code></p>
+<p>将<code>.deploy_git</code>取消隐藏即可</p>
 
                 
             </div>
