@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>编程问题记录</title>
+      <link href="2021/06/02/bian-cheng-wen-ti-ji-lu/"/>
+      <url>2021/06/02/bian-cheng-wen-ti-ji-lu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Maven插件相关"><a href="#Maven插件相关" class="headerlink" title="Maven插件相关"></a>Maven插件相关</h1><p><strong>1、<code>spring-boot-maven-plugin</code>插件报错：<code>repackage failed: Unable to find main class</code></strong></p><p>打包时找不到主程序类(main方法所在类)</p><p>分析：该插件，只需要定义到可运行(有main方法)模块的pom文件中；其他模块中不需要</p><ul><li>一般，项目总pom文件，只负责管理依赖，所以不需要此插件</li><li>项目中其他作为工具或类库的模块中，也不需要</li><li>项目中的各个微服务模块，都可运行，需要此插件</li></ul><p>解决：</p><p>1、项目总POM文件、</p><ul><li>去除<code>spring-boot-maven-plugin</code>插件</li><li>打包方式：<code>&lt;packaging&gt;pom&lt;/packaging&gt;</code></li></ul><p>2、项目需要运行的模块</p><ul><li>使用<code>spring-boot-maven-plugin</code>插件</li><li>打包方式：<code>&lt;packaging&gt;jar&lt;/packaging&gt;</code></li></ul><p>3、工具或类库的模块</p><ul><li>去除<code>spring-boot-maven-plugin</code>插件</li><li>打包方式：<code>&lt;packaging&gt;jar&lt;/packaging&gt;</code></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 问题记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 问题记录 </tag>
+            
+            <tag> Maven </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo主题以及配置</title>
       <link href="2021/06/01/hexo-zhu-ti-yi-ji-pei-zhi/"/>
       <url>2021/06/01/hexo-zhu-ti-yi-ji-pei-zhi/</url>
