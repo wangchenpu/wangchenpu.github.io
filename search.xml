@@ -4,11 +4,38 @@
   
     
     <entry>
+      <title>Windows及日常使用问题记录</title>
+      <link href="2021/06/24/windows-ji-ri-chang-shi-yong-wen-ti-ji-lu/"/>
+      <url>2021/06/24/windows-ji-ri-chang-shi-yong-wen-ti-ji-lu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Windows系统"><a href="#Windows系统" class="headerlink" title="Windows系统"></a>Windows系统</h1><h2 id="无法定位程序输入点ucrtbase-terminate"><a href="#无法定位程序输入点ucrtbase-terminate" class="headerlink" title="无法定位程序输入点ucrtbase.terminate"></a>无法定位程序输入点ucrtbase.terminate</h2><p>解决：安装VC2015 Redistributable</p><blockquote><p>先安装VC2008 Redistributable、VC2010 Redistributable</p></blockquote><h2 id="Task-Scheduler造成CPU占用"><a href="#Task-Scheduler造成CPU占用" class="headerlink" title="Task Scheduler造成CPU占用"></a>Task Scheduler造成CPU占用</h2><p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/1607153257833-23af7b1a-f2c2-40d6-b2e4-a731299b50fe.png" alt="Task Scheduler造成CPU占用"></p><p>Task Scheduler服务是计划管理服务，经过信息查找，判断这是微软“客户体验改善计划”搞的鬼</p><p>解决办法</p><ol><li>此电脑-右键-管理-计算机管理-系统工具-任务计划程序</li><li>定位到：任务计划程序库\Microsoft\Windows\customer experience improvement program</li></ol><p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/1607153257973-235e05a9-b3d9-43d8-aed0-0288e89b6936.png" alt="Task Scheduler造成CPU占用"></p><p>可以看到这里有三个计划任务，都是微软的客户体验改差计划!全部选择禁止或者删除，这样下次电脑再启动之后就不会有这三个计划了。</p><h1 id="Office"><a href="#Office" class="headerlink" title="Office"></a>Office</h1><h2 id="Word未响应"><a href="#Word未响应" class="headerlink" title="Word未响应"></a>Word未响应</h2><p>开始-运行中输入<code>winword /a</code>，进入无加载项word(因为正常进入word无法编辑)</p><p>依次进入<code>word选项--高级--显示--禁用硬件图形加速</code>，去掉硬件加速下的<code>使用子像素定位平滑屏幕上的字体</code></p><h2 id="Word-插入图片显示不全"><a href="#Word-插入图片显示不全" class="headerlink" title="Word_插入图片显示不全"></a>Word_插入图片显示不全</h2><p>例如:有如下Word文档，现在第二行处插入一图片</p><p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/1607153293908-a460bbdb-f293-4faf-bb8e-947e8115e248.png" alt="Word_插入图片显示不全"></p><p>在上述第二行，插入的图片，插入效果如下（显示不全）</p><p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/1607153293911-097bb119-7608-439d-9fc2-6311f4cf9a9c.png" alt="Word_插入图片显示不全"></p><p><strong>解决方法一</strong>：单击选中图片，然后在“开始”选项卡“样式”组，单击“正文”，即可显示全图</p><p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/1607153294002-988b9082-1297-4f2c-90c3-9ff69c63a241.png" alt="解决方法一"></p><p><strong>解决方法二</strong>：将光标移动到插入图片的地方，右击，打开“段落”对话框；</p><p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/1607153294026-840062b2-70bc-4260-8342-e52623e6e822.png" alt="解决方法二"></p><p>将“行距”设为“单倍行距”或“1.5倍行距”或“2倍行距”或“多倍行距”；即可显示全图了</p><p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/1607153294046-668fff94-55c5-4cc5-a5dc-bedd0ba2cc26.png" alt="解决方法二"></p><h2 id="Excel打开空白页灰色"><a href="#Excel打开空白页灰色" class="headerlink" title="Excel打开空白页灰色"></a>Excel打开空白页灰色</h2><p>解决：修改<code>HKEY_CLASSES_ROOT\Excel.Sheet.12\shell\Open\command</code>项默认值</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//原始值<span class="token string">"C:\Program Files\Microsoft Office\Root\Office16<span class="token entity" title="\E">\E</span>XCEL.EXE"</span>//修改值：增加 <span class="token string">"%1"</span>,<span class="token punctuation">(</span>原始值可能会添加了“/dde”，去掉即可<span class="token punctuation">)</span><span class="token string">"C:\Program Files\Microsoft Office\Root\Office16<span class="token entity" title="\E">\E</span>XCEL.EXE"</span> <span class="token string">"%1"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="其他软件、各网站"><a href="#其他软件、各网站" class="headerlink" title="其他软件、各网站"></a>其他软件、各网站</h1><p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/1607153320180-895a45e8-9c09-4a0b-83a1-891b18a71f8c.png" alt="知乎如何隐藏个人动态"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 问题记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 问题记录 </tag>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>编程问题记录</title>
       <link href="2021/06/02/bian-cheng-wen-ti-ji-lu/"/>
       <url>2021/06/02/bian-cheng-wen-ti-ji-lu/</url>
       
-        <content type="html"><![CDATA[<h1 id="Maven插件相关"><a href="#Maven插件相关" class="headerlink" title="Maven插件相关"></a>Maven插件相关</h1><p><strong>1、<code>spring-boot-maven-plugin</code>插件报错：<code>repackage failed: Unable to find main class</code></strong></p><p>打包时找不到主程序类(main方法所在类)</p><p>分析：该插件，只需要定义到可运行(有main方法)模块的pom文件中；其他模块中不需要</p><ul><li>一般，项目总pom文件，只负责管理依赖，所以不需要此插件</li><li>项目中其他作为工具或类库的模块中，也不需要</li><li>项目中的各个微服务模块，都可运行，需要此插件</li></ul><p>解决：</p><p>1、项目总POM文件、</p><ul><li>去除<code>spring-boot-maven-plugin</code>插件</li><li>打包方式：<code>&lt;packaging&gt;pom&lt;/packaging&gt;</code></li></ul><p>2、项目需要运行的模块</p><ul><li>使用<code>spring-boot-maven-plugin</code>插件</li><li>打包方式：<code>&lt;packaging&gt;jar&lt;/packaging&gt;</code></li></ul><p>3、工具或类库的模块</p><ul><li>去除<code>spring-boot-maven-plugin</code>插件</li><li>打包方式：<code>&lt;packaging&gt;jar&lt;/packaging&gt;</code></li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="Maven插件相关"><a href="#Maven插件相关" class="headerlink" title="Maven插件相关"></a>Maven插件相关</h1><p><strong>1、<code>spring-boot-maven-plugin</code>插件报错：<code>repackage failed: Unable to find main class</code></strong></p><p>打包时找不到主程序类(main方法所在类)</p><p>分析：该插件，只需要定义到可运行(有main方法)模块的pom文件中；其他模块中不需要</p><ul><li>一般，项目总pom文件，只负责管理依赖，所以不需要此插件</li><li>项目中其他作为工具或类库的模块中，也不需要</li><li>项目中的各个微服务模块，都可运行，需要此插件</li></ul><p>解决：</p><p>1、项目总POM文件、</p><ul><li>去除<code>spring-boot-maven-plugin</code>插件</li><li>打包方式：<code>&lt;packaging&gt;pom&lt;/packaging&gt;</code></li></ul><p>2、项目需要运行的模块</p><ul><li>使用<code>spring-boot-maven-plugin</code>插件</li><li>打包方式：<code>&lt;packaging&gt;jar&lt;/packaging&gt;</code></li></ul><p>3、工具或类库的模块</p><ul><li>去除<code>spring-boot-maven-plugin</code>插件</li><li>打包方式：<code>&lt;packaging&gt;jar&lt;/packaging&gt;</code></li></ul><h1 id="JavaWeb相关"><a href="#JavaWeb相关" class="headerlink" title="JavaWeb相关"></a>JavaWeb相关</h1><p><strong>1、请求转发下，刷新页面，表单重复提交问题</strong></p><p>问题描述：</p><blockquote><p>以登陆为例，在浏览器页面填写账号、密码然后点击登陆，账号密码正确登陆成功。<br>服务器端通过请求转发的方式响应浏览器一个页面，当在这个页面上点击刷新的时候，就会被提示是否重复提交表单，这个情况其实不应该出现</p></blockquote><p>原因：请求转发是不改变浏览器的URL路径的；URL不改变则浏览器中的表单数据也还在，刷新就是重新提交一次</p><p>解决：用重定向的响应方式后浏览器就不会再保存原来URL的表单了</p><p><strong>JSP页面，EL表达式无法解析</strong></p><p>可能的原因有四个</p><ol><li>Application server in question doesn’t support JSP 2.0. （应用服务器不支持JSP2.0)</li><li>The web.xml is not declared as Servlet 2.4 or higher.  (web.xml中servlet版本没有声明在2.4以上）</li><li>The @page is configured with isELIgnored=true. （页面上配置了&lt;%@ page isELIgnored=”true” %&gt; )</li><li>The web.xml is configured with <el-ignored>true</el-ignored> in <jsp-config>. (web.xml中显式地配置了忽略EL表达式）</li></ol><p><strong>Classes from the default package must not be referenced from JSP file</strong><br>来自默认包的类，不能从JSP文件中引用</p><p>解决：给类添加一层包路径</p><p><strong>下载功能，程序代码没问题，浏览器访问500错误</strong></p><p>web项目的编译输出部署，资源文件是否编译到部署目录中</p><p><strong>Jsoup解析html格式时，class之间有空格</strong></p><blockquote><p><code>&lt;div class=&quot;result c-container &quot;&gt;</code></p></blockquote><p>写成两个select ：doc.select(“div .result”).select(“.c-container”)</p><h1 id="Git相关"><a href="#Git相关" class="headerlink" title="Git相关"></a>Git相关</h1><p><strong>将本地git仓库代码提交到GitHub上时，出现<code>failed to push some refs to &#39;git@github.com:cq1415583094/MyBatis.git&#39;</code></strong></p><p>导致的原因是GitHub上存在一个readme.md的文件，解决</p><ol><li>git pull将远程与本地合并：<code>git pull --rebase mybatis master</code></li><li>重新git push：<code>git push -u mybatis master</code></li></ol>]]></content>
       
       
       <categories>

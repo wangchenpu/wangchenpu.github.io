@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签, 学习,记录,总结">
+    <meta name="keywords" content="Windows及日常使用问题记录, 学习,记录,总结">
     <meta name="description" content="记录、总结、输出、回顾！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签 | 学习日志</title>
+    <title>Windows及日常使用问题记录 | 学习日志</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -284,155 +284,518 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                不积跬步无以至千里
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Windows及日常使用问题记录</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
 
 
-    </div>
-</div>
-
-<main class="content">
+<main class="post-container content">
 
     
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
 
-<div id="tags" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
-            </div>
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/Hexo/" title="Hexo: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Hexo" style="background-color: #F9EBEA;">Hexo
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%8D%9A%E5%AE%A2/" title="博客: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="博客" style="background-color: #F5EEF8;">博客
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" title="问题记录: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="问题记录" style="background-color: #D5F5E3;">问题记录
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Windows/" title="Windows: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Windows" style="background-color: #E8F8F5;">Windows
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%9B%BE%E5%BA%8A/" title="图床: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="图床" style="background-color: #FEF9E7;">图床
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E4%BA%91OSS/" title="云OSS: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="云OSS" style="background-color: #F8F9F9;">云OSS
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Maven/" title="Maven: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Maven" style="background-color: #82E0AA;">Maven
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-            </div>
-        </div>
-    </div>
-</div>
+    #articleContent :focus {
+        outline: none;
+    }
 
-    
-    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
     }
 </style>
-
-<div class="container" data-aos="fade-up">
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div id="tag-wordcloud" class="card-content"></div>
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">
+                                <span class="chip bg-color">问题记录</span>
+                            </a>
+                        
+                            <a href="/tags/Windows/">
+                                <span class="chip bg-color">Windows</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" class="post-category">
+                                问题记录
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-06-24
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-06-24
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    450
+                </div>
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Windows系统"><a href="#Windows系统" class="headerlink" title="Windows系统"></a>Windows系统</h1><h2 id="无法定位程序输入点ucrtbase-terminate"><a href="#无法定位程序输入点ucrtbase-terminate" class="headerlink" title="无法定位程序输入点ucrtbase.terminate"></a>无法定位程序输入点ucrtbase.terminate</h2><p>解决：安装VC2015 Redistributable</p>
+<blockquote>
+<p>先安装VC2008 Redistributable、VC2010 Redistributable</p>
+</blockquote>
+<h2 id="Task-Scheduler造成CPU占用"><a href="#Task-Scheduler造成CPU占用" class="headerlink" title="Task Scheduler造成CPU占用"></a>Task Scheduler造成CPU占用</h2><p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/1607153257833-23af7b1a-f2c2-40d6-b2e4-a731299b50fe.png" alt="Task Scheduler造成CPU占用"></p>
+<p>Task Scheduler服务是计划管理服务，经过信息查找，判断这是微软“客户体验改善计划”搞的鬼</p>
+<p>解决办法</p>
+<ol>
+<li>此电脑-右键-管理-计算机管理-系统工具-任务计划程序</li>
+<li>定位到：任务计划程序库\Microsoft\Windows\customer experience improvement program</li>
+</ol>
+<p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/1607153257973-235e05a9-b3d9-43d8-aed0-0288e89b6936.png" alt="Task Scheduler造成CPU占用"></p>
+<p>可以看到这里有三个计划任务，都是微软的客户体验改差计划!全部选择禁止或者删除，这样下次电脑再启动之后就不会有这三个计划了。</p>
+<h1 id="Office"><a href="#Office" class="headerlink" title="Office"></a>Office</h1><h2 id="Word未响应"><a href="#Word未响应" class="headerlink" title="Word未响应"></a>Word未响应</h2><p>开始-运行中输入<code>winword /a</code>，进入无加载项word(因为正常进入word无法编辑)</p>
+<p>依次进入<code>word选项--高级--显示--禁用硬件图形加速</code>，去掉硬件加速下的<code>使用子像素定位平滑屏幕上的字体</code></p>
+<h2 id="Word-插入图片显示不全"><a href="#Word-插入图片显示不全" class="headerlink" title="Word_插入图片显示不全"></a>Word_插入图片显示不全</h2><p>例如:有如下Word文档，现在第二行处插入一图片</p>
+<p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/1607153293908-a460bbdb-f293-4faf-bb8e-947e8115e248.png" alt="Word_插入图片显示不全"></p>
+<p>在上述第二行，插入的图片，插入效果如下（显示不全）</p>
+<p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/1607153293911-097bb119-7608-439d-9fc2-6311f4cf9a9c.png" alt="Word_插入图片显示不全"></p>
+<p><strong>解决方法一</strong>：单击选中图片，然后在“开始”选项卡“样式”组，单击“正文”，即可显示全图</p>
+<p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/1607153294002-988b9082-1297-4f2c-90c3-9ff69c63a241.png" alt="解决方法一"></p>
+<p><strong>解决方法二</strong>：将光标移动到插入图片的地方，右击，打开“段落”对话框；</p>
+<p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/1607153294026-840062b2-70bc-4260-8342-e52623e6e822.png" alt="解决方法二"></p>
+<p>将“行距”设为“单倍行距”或“1.5倍行距”或“2倍行距”或“多倍行距”；即可显示全图了</p>
+<p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/1607153294046-668fff94-55c5-4cc5-a5dc-bedd0ba2cc26.png" alt="解决方法二"></p>
+<h2 id="Excel打开空白页灰色"><a href="#Excel打开空白页灰色" class="headerlink" title="Excel打开空白页灰色"></a>Excel打开空白页灰色</h2><p>解决：修改<code>HKEY_CLASSES_ROOT\Excel.Sheet.12\shell\Open\command</code>项默认值</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">//原始值
+<span class="token string">"C:\Program Files\Microsoft Office\Root\Office16<span class="token entity" title="\E">\E</span>XCEL.EXE"</span>
+
+//修改值：增加 <span class="token string">"%1"</span>,<span class="token punctuation">(</span>原始值可能会添加了“/dde”，去掉即可<span class="token punctuation">)</span>
+<span class="token string">"C:\Program Files\Microsoft Office\Root\Office16<span class="token entity" title="\E">\E</span>XCEL.EXE"</span> <span class="token string">"%1"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<h1 id="其他软件、各网站"><a href="#其他软件、各网站" class="headerlink" title="其他软件、各网站"></a>其他软件、各网站</h1><p><img src="https://blog-image-2021.oss-cn-hangzhou.aliyuncs.com/1607153320180-895a45e8-9c09-4a0b-83a1-891b18a71f8c.png" alt="知乎如何隐藏个人动态"></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">
+                                    <span class="chip bg-color">问题记录</span>
+                                </a>
+                            
+                                <a href="/tags/Windows/">
+                                    <span class="chip bg-color">Windows</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/06/24/windows-ji-ri-chang-shi-yong-wen-ti-ji-lu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Windows及日常使用问题记录">
+                        
+                        <span class="card-title">Windows及日常使用问题记录</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    问题记录
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">
+                        <span class="chip bg-color">问题记录</span>
+                    </a>
+                    
+                    <a href="/tags/Windows/">
+                        <span class="chip bg-color">Windows</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/06/02/bian-cheng-wen-ti-ji-lu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="编程问题记录">
+                        
+                        <span class="card-title">编程问题记录</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    问题记录
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">
+                        <span class="chip bg-color">问题记录</span>
+                    </a>
+                    
+                    <a href="/tags/Maven/">
+                        <span class="chip bg-color">Maven</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
     </div>
 </div>
 
-<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
-<script type="text/javascript">
-    
+<!-- TOC 悬浮按钮. -->
 
-    $('#tag-wordcloud').jQCloud([{"text":"Hexo","weight":2,"link":"/tags/Hexo/"},{"text":"博客","weight":3,"link":"/tags/博客/"},{"text":"问题记录","weight":2,"link":"/tags/问题记录/"},{"text":"Windows","weight":1,"link":"/tags/Windows/"},{"text":"图床","weight":1,"link":"/tags/图床/"},{"text":"云OSS","weight":1,"link":"/tags/云OSS/"},{"text":"Maven","weight":1,"link":"/tags/Maven/"}], {
-        autoResize: true
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
     });
 </script>
 
     
 
 </main>
+
+
 
 
     <footer class="page-footer bg-color">
